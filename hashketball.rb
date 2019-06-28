@@ -163,8 +163,28 @@ def game_hash
    shoes
   end
 
+  def team_colors(team_name)
 
+    home_team = game_hash[:home][:team_name]
+    away_team = game_hash[:away][:team_name]
 
+    if team_name == home_team
+        game_hash[:home][:colors]
+    
+    elsif team_name == away_team
+        game_hash[:away][:colors]
+
+    else
+        puts "Incorrect team name"
+
+    end
+
+    
+
+  end
+
+  binding.pry
+  0
 
 
 
